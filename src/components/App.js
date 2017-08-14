@@ -18,6 +18,7 @@ class App extends React.Component {
      // add fish method to constructor
      this.addFish = this.addFish.bind(this);
      this.loadSamples = this.loadSamples.bind(this);
+     this.addToOrder = this.addToOrder.bind(this);
   }
 
   addFish(fish) {
@@ -37,6 +38,15 @@ class App extends React.Component {
       fishes: sampleFishes
     })
   }
+
+  addToOrder(key) {
+    // take a copy of state
+    const order = {...this.state.order};
+    // update or add the new number of fish
+    order[key] = order[key] + 1 || 1;
+    // update state
+    this.setState({ order });
+  }
    
   render() {
     return (
@@ -47,7 +57,7 @@ class App extends React.Component {
             { 
               Object
                 .keys(this.state.fishes)
-                .map(key => <Fish key={key} details={this.state.fishes[key]} />) 
+                .map(key => <Fish key={key} index={key} details={this.state.fishes[key]} />) 
             }
           </ul>
         </div>
