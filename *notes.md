@@ -12,6 +12,8 @@
 - props & state
 - getInitialState (vid 13-2)
 - ES6 Destructuring (vid-16 )
+- React referencing components
+  - [React Components](https://facebook.github.io/react/docs/react-component.html)
 
 ## Notes
 - render is always bound to the Class so use `this.`
