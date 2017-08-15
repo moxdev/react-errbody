@@ -11,6 +11,7 @@
 - constructor to extend functions (vid 11)
 - props & state
 - getInitialState (vid 13-2)
+- ES6 Destructuring (vid-16 )
 
 ## Notes
 - render is always bound to the Class so use `this.`
